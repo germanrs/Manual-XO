@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Reparaciones_XO.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="Componentes_Internos">
+        <title>Accediendo a los componentes internos de la XO</title>
+       	<para>
+		Se ha de dividir ésta inspección en dos partes:
+       	</para>
+	<itemizedlist>
+		<listitem><para>1. Inspección del componente Superior.</para></listitem>
+		<listitem><para>2. Inspección del componente Inferior.</para></listitem>
+	</itemizedlist>
+       	<para>
+		Esto con el objetivo de tener una mayor claridad al momento de desarmar el equipo y que los diferentes elementos no se confundan.
+       	</para>
+<section id="Parte_Superior">
+	<title>Parte Superior (Pantalla, Tarjeta Madre)</title>
+        <itemizedlist>
+		<listitem><para>
+		Tipo de Tornillos y Cantidades
+		</para></listitem>
+        </itemizedlist>
+        <figure><title>Tipos de tornillos</title>
+		<mediaobject>
+		<imageobject>
+			<imagedata fileref="./images/fig3.png" width="6in" depth="5.5in" align="center" scale="100"/>
+		</imageobject>
+		<textobject>
+			<phrase>Tipos de tornillos</phrase>
+		</textobject>
+		</mediaobject>
+        </figure>
+	
+        <itemizedlist>
+		<listitem><para>
+		Para inspeccionar la parte interna de la pantalla lo primero que debemos hacer es retirar los 4 tornillos que se encuentran en la parte inferior de la misma.
+		</para></listitem>
+        </itemizedlist>
+
+        <figure><title>Tipos de tornillos</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/fig5.png" width="6in" depth="5.5in" align="center" scale="100"/>
+                </imageobject>
+                <textobject>
+                        <phrase>Tipos de tornillos</phrase>
+                </textobject>
+                </mediaobject>
+        </figure>
+
+        <itemizedlist>
+		<listitem><para>
+		Luego retiramos los soportes del marco y el marco de pantalla. Una vez realizado esto debemos retirar los 4 tornillos que sujetan la pantalla al marco interior.
+		</para></listitem>
+        </itemizedlist>
+
+        <figure><title>Tipos de tornillos</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/fig6.png" width="6in" depth="5.5in" align="center" scale="100"/>
+                </imageobject>
+                <textobject>
+                        <phrase>Tipos de tornillos</phrase>
+                </textobject>
+                </mediaobject>
+        </figure>
+
+        <itemizedlist>
+		<listitem><para>
+		A continuación retiramos los 4 tornillos que unen la cubierta superior del equipo y el marco interno.
+		</para></listitem>
+        </itemizedlist>
+
+        <figure><title>Tipos de tornillos</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/fig7.png" width="6in" depth="5.5in" align="center" scale="100"/>
+                </imageobject>
+                <textobject>
+                        <phrase>Tipos de tornillos</phrase>
+                </textobject>
+                </mediaobject>
+        </figure>
+
+        <itemizedlist>
+		<listitem><para>
+		Retiramos la cubierta superior y procedemos a quitar los 4 tornillos que sujetan el disipador de calor.
+		</para></listitem>
+        </itemizedlist>
+
+        <figure><title>Tipos de tornillos</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/fig8.png" width="6in" depth="5.5in" align="center"  scale="100"/>
+                </imageobject>
+                <textobject>
+                        <phrase>Tipos de tornillos</phrase>
+                </textobject>
+                </mediaobject>
+        </figure>
+
+        <itemizedlist>
+		<listitem><para>
+		Quitamos el tornillo que sujeta la tarjeta de red.
+		</para></listitem>
+        </itemizedlist>
+
+        <figure><title>Tipos de tornillos</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/fig9.png" width="6in" depth="5.5in" align="center" scale="100"/>
+                </imageobject>
+                <textobject>
+                        <phrase>Tipos de tornillos</phrase>
+                </textobject>
+                </mediaobject>
+        </figure>
+
+        <itemizedlist>
+		<listitem><para>
+		Y finalmente si el caso amerita retirar toda la tarjeta madre se deben desconectar los siguientes componentes.
+		</para></listitem>
+        </itemizedlist>
+
+        <figure><title>Tipos de tornillos</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/fig10.png" width="6in" depth="5.5in" align="center" scale="100"/>
+                </imageobject>
+                <textobject>
+                        <phrase>Tipos de tornillos</phrase>
+                </textobject>
+                </mediaobject>
+        </figure>
+
+</section>
+       <section id="Parte_Inferior">
+                <title>Parte Inferior (Teclado, Touchpad)</title>
+                <para>
+                       La parte inferior de la XO està compuesta por dos partes: TECLADO Y  TOUCHPAD
+                </para>
+
+<itemizedlist>
+		<listitem><para>
+		COMPONENTE INFERIOR (Teclado)
+		</para></listitem>
+        </itemizedlist>
+
+	<para>
+                <code>Tipos de Tornillos y cantidades</code>
+                </para>
+<figure><title>Tipos de tornillos</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/tornillos_inferiores.png" width="6in" depth="5.5in" align="center" scale="100"/>
+                </imageobject>
+                <textobject>
+                        <phrase>Tipos de tornillos</phrase>
+                </textobject>
+                </mediaobject>
+        </figure>
+ 
+	<para>
+              Para inspeccionar el teclado, debemos retirar los 5 tornillos que se localizan en la
+parte interior de la batería
+                </para>
+
+<mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/tornillos_bateria.png" width="6in" depth="5.5in" align="center" scale="100"/>
+                </imageobject>
+                </mediaobject>
+
+	<para>
+             Luego retiramos el complemento de cubierta y retiramos los 4 tornillos que
+sujetan el borde superior.
+
+                </para>
+
+<mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/tornillos_sup.png" width="6in" depth="5.5in" align="center" scale="100"/>
+                </imageobject>
+                </mediaobject>
+
+
+        </section>
+</chapter>

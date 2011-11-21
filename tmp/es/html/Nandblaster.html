@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>3.2. Nandblaster</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.8" /><meta name="package" content="Manual_XO-Reparaciones_XO-1.5-es-1-1" /><link rel="home" href="index.html" title="Reparaciones XO" /><link rel="up" href="Formatear_XO.html" title="Capítulo 3. Formatear XO" /><link rel="prev" href="Formatear_XO.html" title="Capítulo 3. Formatear XO" /><link rel="next" href="Formateo_OFW.html" title="3.3. Desde OFW" /></head><body class="draft "><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_left.png" alt="Product Site" /></a><a class="right" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_right.png" alt="Documentation Site" /></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="Formatear_XO.html"><strong>Anterior</strong></a></li><li class="next"><a accesskey="n" href="Formateo_OFW.html"><strong>Siguiente</strong></a></li></ul><div class="section" id="Nandblaster"><div class="titlepage"><div><div><h2 class="title" id="Nandblaster">3.2. Nandblaster</h2></div></div></div><div class="para">
+			Este proceso es para instalar el SO en varias XO al mismo tiempo, mediante un proceso conocido como NANDblaster, en el cual una XO funciona como servidor y envía la imágen a las demás XO.
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Renombrar el archivo que contiene la imágen de la XO, <code class="filename">XXX.zd4</code> a <code class="filename">fs.zd</code>
+				</div></li><li class="listitem"><div class="para">
+					Copiar los 2 archivos <code class="filename">XXX.zd</code> y <code class="filename">fs.zip</code> en la raíz memoria USB.
+				</div></li><li class="listitem"><div class="para">
+					Insertar la memoria USB en la XO Servidor
+				</div></li><li class="listitem"><div class="para">
+					Acceder al OK-Promt y escribir lo siguiente:
+				</div></li></ul></div><pre class="screen">
+OLPC D5, 1 GiB memory installed, 4 GB internal storage, S/N SHC0520179F
+OpenFirmware Q3A62 EC Firmware Ver:2.2.3
+
+Type 'help' for more information
+
+ok <code class="code">nb-secure</code>
+
+</pre><div class="para">
+			Esperar que la XO elija el canal por el cual se estará enviando la imágen de la XO.
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/nandblaster.png" width="444" alt="XO transmitiendo la imágen por nandblaster" /></div></div><h6>Figura 3.4. XO transmitiendo la imágen por nandblaster</h6></div><br class="figure-break" /><div class="para">
+			Una ves que la XO servidor esté transmitiendo la imágen como se muestra en la figura anterior, se puede iniciar a
+		</div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="Formatear_XO.html"><strong>Anterior</strong>Capítulo 3. Formatear XO</a></li><li class="up"><a accesskey="u" href="#"><strong>Subir</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Inicio</strong></a></li><li class="next"><a accesskey="n" href="Formateo_OFW.html"><strong>Siguiente</strong>3.3. Desde OFW</a></li></ul></body></html>

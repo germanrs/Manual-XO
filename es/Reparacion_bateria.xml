@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Reparaciones_XO.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="Reparacion_bateria">
+	<title>Reparación batería</title>
+		<para>
+			Descripción de la reparacion de las baterías en las XO
+      		</para>
+	
+	<section id="Bateria_OpenFirmware">
+	<title>Mirar desde OpenFirmware </title>
+		<para>
+			Para ver informacion sobre el estado de la batería, en el <code>ok promt</code> de <code>OFW</code>, escribí el comando: 
+		</para>
+
+		<screen><code>watch-battery</code></screen>
+
+		<para>
+		Para acesar el prompt de <code>OFW</code>, se necesita una llave de desarrollar. 
+		</para>
+	</section>
+	
+
+	<section id="Bateria_capacidad_con_olpc-pwr-log">
+	<title>Medir la capacidad con olpc-pwr-log </title>
+		
+
+		<para>
+		Las baterías deberían tener una capacidad de <code>2800-3000 mAh</code>. Es posible medir la capacidad de una batería, así podés asegurarte que la batería está funcionando correctamente.</para>
+
+    		<itemizedlist>
+			<listitem><para>Correr la laptop sin el cargador conectado, hasta que la laptop se descargue completamente (y se apaga por no tener más electricidad)</para></listitem>
+    			<listitem><para>Sacar la batería, conectar el cargador, y correr la laptop de nuevo.</para></listitem>
+    			<listitem><para>En la actividad terminal, teclear el comando <screen><code>olpc-pwr-log</code></screen></para></listitem>
+    			<listitem><para>Cuando dice, insertar la batería</para></listitem>
+    			<listitem><para>Ahora dice una línea cada unos segundos con varias columnas. Las interesantes son la segunda (porcentaje de carga) y la última (número de mAh entregados a la batería). </para></listitem>
+		</itemizedlist>
+
+
+<para>Como sabemos que la batería estuvo totalmente descargada (porque lo corrimos hasta que la laptop se apagó), esperamos entregar por lo menos <code>2800mAh</code> a la batería hasta que deje de cargar.</para>
+
+<para>Para saber mas de <code>olpc-pwr-log</code>, ir a <ulink url="http://wiki.laptop.org/go/XO_power_draw#olpc-pwr-log"><citetitle>XO power draw#olpc-pwr-log</citetitle></ulink></para>
+	</section>
+	 
+</chapter>

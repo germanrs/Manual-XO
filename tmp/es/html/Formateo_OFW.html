@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>3.3. Desde OFW</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.8" /><meta name="package" content="Manual_XO-Reparaciones_XO-1.5-es-1-1" /><link rel="home" href="index.html" title="Reparaciones XO" /><link rel="up" href="Formatear_XO.html" title="Capítulo 3. Formatear XO" /><link rel="prev" href="Nandblaster.html" title="3.2. Nandblaster" /><link rel="next" href="Activaciones_XO.html" title="Capítulo 4. Activaciones XO" /></head><body class="draft "><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_left.png" alt="Product Site" /></a><a class="right" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_right.png" alt="Documentation Site" /></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="Nandblaster.html"><strong>Anterior</strong></a></li><li class="next"><a accesskey="n" href="Activaciones_XO.html"><strong>Siguiente</strong></a></li></ul><div class="section" id="Formateo_OFW"><div class="titlepage"><div><div><h2 class="title" id="Formateo_OFW">3.3. Desde OFW</h2></div></div></div><div class="para">
+			Cuando hay casos de XO que una de las 4 teclas de juego están dañadas, estas nos impiden formatear por los metodos USB y Nandblaster, para estos casos vamos a formatear desde OpenFirmware usando una memoria USB con los archivos <code class="filename">fz-a1.zd4</code> y <code class="filename">fs.zip</code>.
+		</div><div class="para">
+			En la XO accedemos al OK Promt y escribimos el siguiente comando:
+		</div><div class="para">
+			
+<pre class="screen">
+ok fs-update u:\fz-a1.zd4
+</pre>
+
+		</div><div class="para">
+			Esto iniciará el procedimiento de formateo desde la memoria USB, al finalizar, escribimos lo siguiente en en OK Prompt
+		</div><div class="para">
+			
+<pre class="screen">
+ok reboot
+</pre>
+
+		</div><div class="important"><div class="admonition_header"><h2>Importante</h2></div><div class="admonition"><div class="para">
+				Para hacer uso de este método, se necesita tener una llave de desarrollo para las XO a formatear por esta vía...
+			</div></div></div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="Nandblaster.html"><strong>Anterior</strong>3.2. Nandblaster</a></li><li class="up"><a accesskey="u" href="#"><strong>Subir</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Inicio</strong></a></li><li class="next"><a accesskey="n" href="Activaciones_XO.html"><strong>Siguiente</strong>Capítulo 4. Activaciones XO</a></li></ul></body></html>

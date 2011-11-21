@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>5.3. Invalid System Date 2</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.8" /><meta name="package" content="Manual_XO-Reparaciones_XO-1.5-es-1-1" /><link rel="home" href="index.html" title="Reparaciones XO" /><link rel="up" href="Problemas_Frecuentes.html" title="Capítulo 5. Problemas Frecuentes" /><link rel="prev" href="Invalid_System_Date.html" title="5.2. Invalid System Date" /><link rel="next" href="Sin_Red_OFW.html" title="5.4. Sin Red - Desde OFW" /></head><body class="draft "><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_left.png" alt="Product Site" /></a><a class="right" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_right.png" alt="Documentation Site" /></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="Invalid_System_Date.html"><strong>Anterior</strong></a></li><li class="next"><a accesskey="n" href="Sin_Red_OFW.html"><strong>Siguiente</strong></a></li></ul><div class="section" id="Invalid_System_Date_2"><div class="titlepage"><div><div><h2 class="title" id="Invalid_System_Date_2">5.3. Invalid System Date 2</h2></div></div></div><div class="para">
+			<code class="filename">Descripción del problema</code>
+		</div><div class="para">
+			La XO enciende pidiendo la activación, si se utiliza una activación válida la XO no la acepta. Este problema solamente ha sido encontrado en las XO 1.5 con la versión del Firmware <code class="filename">Q3A62</code>, en el cual la fecha del RTC se adelanta hasta el 2012 o posterior, y la XO cree que su activación se ha vencido.
+		</div><div class="important"><div class="admonition_header"><h2>LAPTOPS.DAT</h2></div><div class="admonition"><div class="para">
+				Ojo: Si obtenemos el serial y UUID con un keycolletor, podemos ver el "Serial - UUID - Fecha Actual de la XO 
+<pre class="screen">
+SHC0520179F 8F1FA524-680D-9772-FBFA-5D9D96BE64A8 20121012T055657Z
+SHC051020F8 5B264D78-FF4E-8133-DB3C-DA5CAAB35862 20220101T071147Z
+SHC05200E0D 3EEB9C69-EB31-9802-BF14-30A401F5AE08 20220104T025218Z
+SHC05200AA9 6F84C32E-FAA5-0ED0-7673-002F1FC7143A 20121005T054608Z
+</pre>
+
+			</div></div></div><div class="para">
+			<code class="filename">Pasos a seguir...</code>
+		</div><div class="para">
+			1. Crear una llave de desarrollar para la XO con el problema.
+		</div><div class="para">
+			2. Acceder al <code class="filename">OK-Promt</code>
+		</div><div class="para">
+			3. Escribir boot, para poder acceder a Sugar
+		</div><pre class="screen">
+OLPC D5, 1 GiB memory installed, 4 GB internal storage, S/N SHC0520179F
+OpenFirmware Q3A62 EC Firmware Ver:2.2.3
+
+Type 'help' for more information
+
+<code class="filename">ok boot</code>
+</pre><div class="para">
+			4. En sugar, abrir la actividad terminal en la XO y escribir lo siguiente
+		</div><pre class="screen">
+	<code class="filename">su -</code>
+<code class="filename">date --utc -s "2011-05-24 17:58:44"</code>
+<code class="filename">hwclock --systohc</code>
+</pre></div><ul class="docnav"><li class="previous"><a accesskey="p" href="Invalid_System_Date.html"><strong>Anterior</strong>5.2. Invalid System Date</a></li><li class="up"><a accesskey="u" href="#"><strong>Subir</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Inicio</strong></a></li><li class="next"><a accesskey="n" href="Sin_Red_OFW.html"><strong>Siguiente</strong>5.4. Sin Red - Desde OFW</a></li></ul></body></html>

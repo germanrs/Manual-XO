@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Reparaciones_XO.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="Formatear_XO">
+	<title>Formatear XO</title>
+	<para>
+	En la XO 1.5, necesitamos 2 archivos <filename>xxx.zd4</filename> y <filename>fs.zip</filename>
+	</para>
+	
+	<para>
+	En la XO 1.0, los archivos son <filename>xxx.img</filename> y <filename>fs.zip</filename>
+	</para>
+
+	<important>
+	<para>Los archivos <filename>fs.zip</filename> son propios de cada versión del SO, es decir el <filename>fs.zip</filename> de la XO 1.5 no funciona con la XO 1.0</para>
+
+<para>
+        <itemizedlist>
+
+<listitem><para>Para el año 2012, los archivos que se están utilizando son los siguientes</para></listitem>
+<listitem><para>Costa Atlantica: <filename>fz-a1.zd4</filename> y <filename>fs.zip</filename></para></listitem>
+<listitem><para>Pacífico XO 1.5: <filename>fz-p1.zd4</filename> y <filename>fs.zip</filename></para></listitem>
+<listitem><para>Pacífico XO 1.0: <filename>fz-p1.img</filename> y <filename>fs.zip</filename></para></listitem>
+        </itemizedlist>
+</para>
+	</important>
+
+        <section id="USB">
+                <title>USB</title>
+
+	<itemizedlist>
+		<listitem><para>
+			Copiar los 2 archivos <filename>xxx.zd4</filename>, para la XO 1.5 o el <filename>xxx.img</filename>, para la XO 1.0, y <filename>fs.zip</filename> en la raíz de la memoria USB.
+		</para></listitem>
+		<listitem><para>Encender la XO presionando los 4 botones de juego.</para></listitem>
+		<listitem><para>Esperar que el proceso finalice.</para></listitem>
+	</itemizedlist>
+
+        <figure><title>Botones de juego para formatear la XO</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/4_game_keys.png" format="PNG" scalefit="1" />
+                </imageobject>
+                </mediaobject>
+        </figure>
+
+        <figure><title>Proceso de Formateo de la XO</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/formateo.png" format="PNG" scalefit="1" />
+                </imageobject>
+                </mediaobject>
+        </figure>
+
+	<important>
+		<para>El siguiente paso en el proceso de formateo de la XO, es la actualización del <filename>Firmware</filename> en el cual la XO pasará de la versión <filename>Q3A41</filename> a la versión <filename>Q3B13</filename>, es importante que la XO se encuentre conectada con el cargador a la corriente eléctrica, sino este proceso se omitirá y la XO no se actualizará...</para>
+	</important>
+
+	<important>
+		<para>En las XO 1.0 la versión del Firmware deberá de ser la versión <filename>Q2E45</filename>, en el caso de que el firmeware sea distinto, este se deberá actualizar al final del proceso de formateo</para>
+	</important>
+
+	<para>
+	Una vez terminado el proceso de formateo, la XO se reiniciará automaticamente, y luego buscará el permiso de activación en el siguiente orden: Memoria SD, Memoria USB, Activación Inalámbrica
+	</para>
+
+        <figure><title>XO sin permiso de activación</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/activacion.png" format="PNG" scalefit="1" />
+                </imageobject>
+                </mediaobject>
+        </figure>
+	
+	<note>
+		<para>
+Antes de formatear una XO, es necesario revisar la carga de la batería, para evitar que esta se apague durante el proceso, si tenemos suficientes regletas para conectar las XO a corriente eléctrica, es mejor hacerlo.
+		</para>
+	</note>
+
+        <important>
+                <para>
+                Estos archivos corresponden a la XO 1.5 basada en el release 11.2.0 de OLPC con Fedora 14.
+                </para>
+        </important>
+
+
+	</section>
+
+	<section id="Nandblaster">
+                <title>Nandblaster</title>
+                <para>
+		Este proceso es para instalar el SO en varias XO al mismo tiempo, mediante un proceso conocido como NANDblaster, en el cual una XO funciona como servidor y envía la imágen a las demás XO.
+                </para>
+	
+	<itemizedlist>
+                <listitem><para>
+			Renombrar el archivo que contiene la imágen de la XO, <filename>XXX.zd4</filename> a <filename>fs.zd</filename>
+		</para></listitem>
+                <listitem><para>
+                        Copiar los 2 archivos <filename>XXX.zd</filename> y <filename>fs.zip</filename> en la raíz memoria USB.
+                </para></listitem>
+                <listitem><para>Insertar la memoria USB en la XO Servidor</para></listitem>
+                <listitem><para>Acceder al OK-Promt y escribir lo siguiente:</para></listitem>
+        </itemizedlist>
+		<screen>
+OLPC D5, 1 GiB memory installed, 4 GB internal storage, S/N SHC0520179F
+OpenFirmware Q3A62 EC Firmware Ver:2.2.3
+
+Type 'help' for more information
+
+ok <code>nb-secure</code>
+		
+</screen>
+		<para>
+		Esperar que la XO elija el canal por el cual se estará enviando la imágen de la XO.
+		</para>
+	
+	        <figure><title>XO transmitiendo la imágen por nandblaster</title>
+        	        <mediaobject>
+        	        <imageobject>
+        	                <imagedata fileref="./images/nandblaster.png" format="PNG" scalefit="1" />
+        	        </imageobject>
+        	        </mediaobject>
+	        </figure>
+
+		<para>
+		Una ves que la XO servidor esté transmitiendo la imágen como se muestra en la figura anterior, se puede iniciar a 
+		</para>
+        </section>
+	<section id="Formateo_OFW">
+	<title>Desde OFW</title>
+	<para>
+	Cuando hay casos de XO que una de las 4 teclas de juego están dañadas, estas nos impiden formatear por los metodos USB y Nandblaster, para estos casos vamos a formatear desde OpenFirmware usando una memoria USB con los archivos <filename>fz-a1.zd4</filename> y <filename>fs.zip</filename>.
+	</para>
+
+	<para>
+	En la XO accedemos al OK Promt y escribimos el siguiente comando:
+	</para>
+
+	<para>
+	<screen>
+ok fs-update u:\fz-a1.zd4
+	</screen>
+	</para>
+
+	<para>
+	Esto iniciará el procedimiento de formateo desde la memoria USB, al finalizar, escribimos lo siguiente en en OK Prompt
+	</para>
+
+	<para>
+	<screen>
+ok reboot
+	</screen>
+	</para>
+	
+	<important>
+	<para>
+	Para hacer uso de este método, se necesita tener una llave de desarrollo para las XO a formatear por esta vía...
+	</para>
+	</important>
+
+	</section>
+</chapter>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Capítulo 2. Inspección General del Equipo</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.8" /><meta name="package" content="Manual_XO-Reparaciones_XO-1.5-es-1-1" /><link rel="home" href="index.html" title="Reparaciones XO" /><link rel="up" href="index.html" title="Reparaciones XO" /><link rel="prev" href="Introduccion.html" title="Capítulo 1. Introducción" /><link rel="next" href="Componentes_Internos.html" title="Capítulo 3. Accediendo a los componentes internos de la XO" /></head><body class="draft "><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_left.png" alt="Product Site" /></a><a class="right" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_right.png" alt="Documentation Site" /></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="Introduccion.html"><strong>Anterior</strong></a></li><li class="next"><a accesskey="n" href="Componentes_Internos.html"><strong>Siguiente</strong></a></li></ul><div xml:lang="es" class="chapter" id="Aspesctos_Generales" lang="es"><div class="titlepage"><div><div><h2 class="title">Capítulo 2. Inspección General del Equipo</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="Aspesctos_Generales.html#Test_XO_">2.1. Test XO</a></span></dt></dl></div><div class="para">
+		Para iniciar la inspección detallada de la XO es importante realizar una previa revisión del hardware. Este proceso es importante ya que ayudará a tener una mejor visión de los posibles daños del software que se puedan identificar más adelante. Se han de revisar los siguientes componentes:
+	</div><div class="variablelist"><dl><dt class="varlistentry"><span class="term">Pantalla: </span></dt><dd><div class="para">
+					Se debe inspeccionar que no esté quebrada o rallada.
+				</div></dd><dt class="varlistentry"><span class="term">Teclado: </span></dt><dd><div class="para">
+					Se verifica si alguna tecla o alguna parte de la goma del teclado se ha desprendido.
+				</div></dd><dt class="varlistentry"><span class="term">Antena: </span></dt><dd><div class="para">
+					Es importante revisar que ninguna de las dos antenas se encuentre quebrada o flojas ya que esto puede perjudicar considerablemente en la detección de redes inalámbricas.
+				</div></dd><dt class="varlistentry"><span class="term">Batería: </span></dt><dd><div class="para">
+					Se debe verificar que los seguros plásticos que mantienen a la batería en la posición adecuada no se encuentren quebrados
+				</div></dd><dt class="varlistentry"><span class="term">Serial: </span></dt><dd><div class="para">
+					Aunque este no se considere parte del hardware es importante que al retirar la batería del equipo se verifique si este se encuentra en la parte inferior. El número del serial es muy importante para los diferentes procesos internos del área ya que brinda información específica de la XO. En caso que este número de serial haya sido retirado de la XO el proceso a seguir para la obtención del mismo es el siguiente
+				</div></dd></dl></div><div class="para">
+		Encender la XO e inmediatamente presionar la tecla derecha (botones de juego. Figura 1). Al realizar esta acción podremos ver información del equipo entre las cuales está el número serial.
+	</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/fig1.png" alt="Figura 1" /></div></div><h6>Figura 2.1. Figura 1</h6></div><br class="figure-break" /><div class="para">
+		Una vez obtenido el número de serial podemos utilizar la aplicación Zint Barcode (Linux-Windows) para imprimirlo.
+	</div><div class="section" id="Test_XO_"><div class="titlepage"><div><div><h2 class="title" id="Test_XO_">2.1. Test XO</h2></div></div></div><div class="para">
+			Las XO contienen el Hardware Diagnostics (Diagnóstico de Hardware) lo cual realiza una revisión más exhaustiva de los componentes del equipo. Para proceder a esta prueba se debe realizar los siguientes pasos:
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Encender la XO.
+				</div></li><li class="listitem"><div class="para">
+					Presionar inmediatamente el botón direccional izquierdo. Figura 2
+				</div></li><li class="listitem"><div class="para">
+					Automáticamente el diagnóstico se inicia.
+				</div></li></ul></div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/fig2.png" alt="Figura 2" /></div></div><h6>Figura 2.2. Figura 2</h6></div><br class="figure-break" /><div class="para">
+			A continuación se detalla los componentes que se verifican en orden de ejecución:
+		</div><div class="variablelist"><dl><dt class="varlistentry"><span class="term">Batería: </span></dt><dd><div class="para">
+						Podemos observar el estado de la misma; si se encuentra cargándose o viceversa, además de esto podemos ver el porcentaje de carga, voltaje, etc.
+					</div></dd><dt class="varlistentry"><span class="term">Pantalla: </span></dt><dd><div class="para">
+						Se debe inspeccionar que no esté quebrada o rallada.
+					</div></dd><dt class="varlistentry"><span class="term">Los datos del fabricante: </span></dt><dd><div class="para">
+						Estos son: Número de serial, llaves públicas y privada de la fundación.
+					</div></dd><dt class="varlistentry"><span class="term">Memoria RAM: </span></dt><dd><div class="para">
+						La SDRAM en la tarjeta madre es rápidamente testeada.
+					</div></dd><dt class="varlistentry"><span class="term">Procesador: </span></dt><dd><div class="para">
+
+					</div></dd><dt class="varlistentry"><span class="term">Puertos USB: </span></dt><dd><div class="para">
+
+					</div></dd><dt class="varlistentry"><span class="term">Audio: </span></dt><dd><div class="para">
+						Un leve sonido es reproducido por los parlantes. Luego por medio del micrófono se permite la grabación de cualquier sonido el cual es reproducido posteriormente a través de los parlantes.
+					</div></dd><dt class="varlistentry"><span class="term">Cámara: </span></dt><dd><div class="para">
+						Se realiza una prueba de video y captura de imágenes con una duración de 20 segundos.
+					</div></dd><dt class="varlistentry"><span class="term">NANDFlash: </span></dt><dd><div class="para">
+						Se realiza rápidamente una prueba en este dispositivo de almacenamiento.
+					</div></dd><dt class="varlistentry"><span class="term">Pantalla: </span></dt><dd><div class="para">
+						La pantalla es probada parcialmente con unas barras de colores, a continuación, las capacidades de dibujo del CPU se muestran por un tiempo.
+					</div></dd><dt class="varlistentry"><span class="term">Redes inalámbricas: </span></dt><dd><div class="para">
+						Muestra el nombre de las redes que detecta en el lugar.
+					</div></dd><dt class="varlistentry"><span class="term">RTC: </span></dt><dd><div class="para">
+						The real time Clock.
+					</div></dd><dt class="varlistentry"><span class="term">Timer:</span></dt><dd><div class="para">
+						Varias alarmas son probadas.
+					</div></dd><dt class="varlistentry"><span class="term">Touchpad: </span></dt><dd><div class="para">
+						Se realiza una prueba en el mouse del equipo.
+					</div></dd><dt class="varlistentry"><span class="term">Teclado: </span></dt><dd><div class="para">
+						Se realiza prueba del teclado completo y adicionalmente de las teclas que se encuentran ubicadas en el marco de la pantalla.
+					</div></dd></dl></div></div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="Introduccion.html"><strong>Anterior</strong>Capítulo 1. Introducción</a></li><li class="up"><a accesskey="u" href="#"><strong>Subir</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Inicio</strong></a></li><li class="next"><a accesskey="n" href="Componentes_Internos.html"><strong>Siguiente</strong>Capítulo 3. Accediendo a los componentes internos...</a></li></ul></body></html>

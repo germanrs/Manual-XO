@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Capítulo 3. Formatear XO</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.8" /><meta name="package" content="Manual_XO-Reparaciones_XO-1.5-es-1-1" /><link rel="home" href="index.html" title="Reparaciones XO" /><link rel="up" href="index.html" title="Reparaciones XO" /><link rel="prev" href="Test_XO.html" title="Capítulo 2. Test XO" /><link rel="next" href="Nandblaster.html" title="3.2. Nandblaster" /></head><body class="draft "><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_left.png" alt="Product Site" /></a><a class="right" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_right.png" alt="Documentation Site" /></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="Test_XO.html"><strong>Anterior</strong></a></li><li class="next"><a accesskey="n" href="Nandblaster.html"><strong>Siguiente</strong></a></li></ul><div xml:lang="es" class="chapter" id="Formatear_XO" lang="es"><div class="titlepage"><div><div><h2 class="title">Capítulo 3. Formatear XO</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="Formatear_XO.html#USB">3.1. USB</a></span></dt><dt><span class="section"><a href="Nandblaster.html">3.2. Nandblaster</a></span></dt><dt><span class="section"><a href="Formateo_OFW.html">3.3. Desde OFW</a></span></dt></dl></div><div class="para">
+		En la XO 1.5, necesitamos 2 archivos <code class="filename">xxx.zd4</code> y <code class="filename">fs.zip</code>
+	</div><div class="para">
+		En la XO 1.0, los archivos son <code class="filename">xxx.img</code> y <code class="filename">fs.zip</code>
+	</div><div class="important"><div class="admonition_header"><h2>Importante</h2></div><div class="admonition"><div class="para">
+			Los archivos <code class="filename">fs.zip</code> son propios de cada versión del SO, es decir el <code class="filename">fs.zip</code> de la XO 1.5 no funciona con la XO 1.0
+		</div><div class="para">
+			<div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						Para el año 2012, los archivos que se están utilizando son los siguientes
+					</div></li><li class="listitem"><div class="para">
+						Costa Atlantica: <code class="filename">fz-a1.zd4</code> y <code class="filename">fs.zip</code>
+					</div></li><li class="listitem"><div class="para">
+						Pacífico XO 1.5: <code class="filename">fz-p1.zd4</code> y <code class="filename">fs.zip</code>
+					</div></li><li class="listitem"><div class="para">
+						Pacífico XO 1.0: <code class="filename">fz-p1.img</code> y <code class="filename">fs.zip</code>
+					</div></li></ul></div>
+		</div></div></div><div class="section" id="USB"><div class="titlepage"><div><div><h2 class="title" id="USB">3.1. USB</h2></div></div></div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Copiar los 2 archivos <code class="filename">xxx.zd4</code>, para la XO 1.5 o el <code class="filename">xxx.img</code>, para la XO 1.0, y <code class="filename">fs.zip</code> en la raíz de la memoria USB.
+				</div></li><li class="listitem"><div class="para">
+					Encender la XO presionando los 4 botones de juego.
+				</div></li><li class="listitem"><div class="para">
+					Esperar que el proceso finalice.
+				</div></li></ul></div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/4_game_keys.png" width="444" alt="Botones de juego para formatear la XO" /></div></div><h6>Figura 3.1. Botones de juego para formatear la XO</h6></div><br class="figure-break" /><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/formateo.png" width="444" alt="Proceso de Formateo de la XO" /></div></div><h6>Figura 3.2. Proceso de Formateo de la XO</h6></div><br class="figure-break" /><div class="important"><div class="admonition_header"><h2>Importante</h2></div><div class="admonition"><div class="para">
+				El siguiente paso en el proceso de formateo de la XO, es la actualización del <code class="filename">Firmware</code> en el cual la XO pasará de la versión <code class="filename">Q3A41</code> a la versión <code class="filename">Q3B13</code>, es importante que la XO se encuentre conectada con el cargador a la corriente eléctrica, sino este proceso se omitirá y la XO no se actualizará...
+			</div></div></div><div class="important"><div class="admonition_header"><h2>Importante</h2></div><div class="admonition"><div class="para">
+				En las XO 1.0 la versión del Firmware deberá de ser la versión <code class="filename">Q2E45</code>, en el caso de que el firmeware sea distinto, este se deberá actualizar al final del proceso de formateo
+			</div></div></div><div class="para">
+			Una vez terminado el proceso de formateo, la XO se reiniciará automaticamente, y luego buscará el permiso de activación en el siguiente orden: Memoria SD, Memoria USB, Activación Inalámbrica
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/activacion.png" width="444" alt="XO sin permiso de activación" /></div></div><h6>Figura 3.3. XO sin permiso de activación</h6></div><br class="figure-break" /><div class="note"><div class="admonition_header"><h2>Nota</h2></div><div class="admonition"><div class="para">
+				Antes de formatear una XO, es necesario revisar la carga de la batería, para evitar que esta se apague durante el proceso, si tenemos suficientes regletas para conectar las XO a corriente eléctrica, es mejor hacerlo.
+			</div></div></div><div class="important"><div class="admonition_header"><h2>Importante</h2></div><div class="admonition"><div class="para">
+				Estos archivos corresponden a la XO 1.5 basada en el release 11.2.0 de OLPC con Fedora 14.
+			</div></div></div></div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="Test_XO.html"><strong>Anterior</strong>Capítulo 2. Test XO</a></li><li class="up"><a accesskey="u" href="#"><strong>Subir</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Inicio</strong></a></li><li class="next"><a accesskey="n" href="Nandblaster.html"><strong>Siguiente</strong>3.2. Nandblaster</a></li></ul></body></html>

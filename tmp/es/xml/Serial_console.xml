@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Reparaciones_XO.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="Serial_console" lang="es">
+	<title>Serial console</title>
+	 <para>
+		Con el serial console es posible investigar (y a veces solucionar) problemas con XOs que no funcionan.
+	</para>
+	 <para>
+		Con el serial console, podes ver lo que hace la XO cuando se enciende, y podes acesar al prompt de <code>OFW</code>, antes de que la pantalla se encienda. También, si el kernel en la XO se cae, usualmente es posible ver los detalles del caido con el serial console.
+	</para>
+	 <para>
+		<ulink url="http://wiki.laptop.org/go/Serial_adapters"><citetitle>Serial adapters</citetitle></ulink> tiene los detalles.
+	</para>
+	 <para>
+		El proceso (más o menos) desde la pagina es:
+	</para>
+	 <itemizedlist>
+		<listitem>
+			<para>
+				Desensamblar la XO para acesar a la tarjeta madre.
+			</para>
+		</listitem>
+		 <listitem>
+			<para>
+				Conectar el cable de serial a la tarjeta y al serial board
+			</para>
+		</listitem>
+		 <listitem>
+			<para>
+				Conectar el serial board a otra computadora con un cable <code>USB</code> A-B
+			</para>
+		</listitem>
+		 <listitem>
+			<para>
+				Configurar minicom con la informacion desde <ulink url="http://wiki.laptop.org/go/Serial_adapters#Software"><citetitle>Serial_adapters#Software</citetitle></ulink>
+			</para>
+		</listitem>
+		 <listitem>
+			<para>
+				Correr <code>minicom</code>
+			</para>
+		</listitem>
+		 <listitem>
+			<para>
+				Encender la XO
+			</para>
+		</listitem>
+
+	</itemizedlist>
+	 <para>
+		Daniel dejó el equipo en la oficina FZT para hacer este proceso.
+	</para>
+</chapter>
+

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Reparaciones XO</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.6" /><meta name="package" content="Manual_XO-Reparaciones_XO-1.5-es-1-1" /><meta name="description" content="El presente documento es la guía de reparaciones y diagnóstico de los XO, con el fin de solucionar los problemas de software o de hardware" /></head><body><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_left.png" alt="Product Site" /></a><a class="right" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_right.png" alt="Documentation Site" /></a></p><div xml:lang="es" class="book" id="id449786" lang="es"><div class="titlepage"><div><div class="producttitle"><span class="productname">Manual XO</span> <span class="productnumber">1.5</span></div><div><h1 id="id449786" class="title">Reparaciones XO</h1></div><div><h2 class="subtitle"></h2></div><p class="edition">Edición 1</p><div><h3 class="corpauthor">
+		<span class="inlinemediaobject"><object data="./images/fzt.svg" type="image/svg+xml"> </object></span>
+
+	</h3></div><div><div xml:lang="es" class="authorgroup" lang="es"><div class="author"><h3 class="author"><span class="firstname">German</span> <span class="surname">Ruíz</span></h3><div class="affiliation"><span class="orgname">Fundación Zamora Terán</span> <span class="orgdiv">ST</span></div><code class="email"><a class="email" href="mailto:gruiz@fundacionzt.org">gruiz@fundacionzt.org</a></code></div><div class="author"><h3 class="author"><span class="firstname">María</span> <span class="surname">Pérez</span></h3><div class="affiliation"><span class="orgname">Fundación Zamora Terán</span> <span class="orgdiv">ST</span></div><code class="email"><a class="email" href="mailto:mnperez@fundacionzt.org">mnperez@fundacionzt.org</a></code></div></div></div><hr /><div><div class="abstract"><h6>Resumen</h6><div class="para">
+			El presente documento es la guía de reparaciones y diagnóstico de los XO, con el fin de solucionar los problemas de software o de hardware
+		</div></div></div></div><hr /></div><div class="toc"><dl><dt><span class="chapter"><a href="#Introduccion">1. Introducción</a></span></dt><dt><span class="chapter"><a href="#Aspesctos_Generales">2. Inspección General del Equipo</a></span></dt><dd><dl><dt><span class="section"><a href="#Test_XO_">2.1. Test XO</a></span></dt></dl></dd><dt><span class="chapter"><a href="#Componentes_Internos">3. Accediendo a los componentes internos de la XO</a></span></dt><dd><dl><dt><span class="section"><a href="#Parte_Superior">3.1. Parte Superior (Pantalla, Tarjeta Madre)</a></span></dt><dt><span class="section"><a href="#Parte_Inferior">3.2. Parte Inferior (Teclado, Touchpad)</a></span></dt></dl></dd><dt><span class="chapter"><a href="#Formatear_XO">4. Formatear XO</a></span></dt><dd><dl><dt><span class="section"><a href="#USB">4.1. USB</a></span></dt><dt><span class="section"><a href="#Nandblaster">4.2. Nandblaster</a></span></dt></dl></dd><dt><span class="chapter"><a href="#Activaciones_XO">5. Activaciones XO</a></span></dt><dd><dl><dt><span class="section"><a href="#Activaciones_USB">5.1. Imágenes con Firma</a></span></dt><dt><span class="section"><a href="#Activaciones_XS">5.2. Imágenes con Firma</a></span></dt></dl></dd><dt><span class="chapter"><a href="#Problemas_Frecuentes">6. Problemas Frecuentes</a></span></dt><dd><dl><dt><span class="section"><a href="#Boot_Failed">6.1. Boot Failed</a></span></dt><dt><span class="section"><a href="#Invalid_System_Date">6.2. Invalid System Date</a></span></dt><dt><span class="section"><a href="#Invalid_System_Date_2">6.3. Invalid System Date 2</a></span></dt><dt><span class="section"><a href="#Sin_Red">6.4. Sin Acceso a redes wireless</a></span></dt><dt><span class="section"><a href="#Memtest">6.5. Prueba Memoria RAM</a></span></dt><dt><span class="section"><a href="#Minicom">6.6. Prueba Nandflash</a></span></dt></dl></dd><dt><span class="chapter"><a href="#Serial_console">7. Serial console</a></span></dt><dt><span class="chapter"><a href="#Reparacion_bateria">8. Reparación batería</a></span></dt><dd><dl><dt><span class="section"><a href="#Bateria_OpenFirmware">8.1. Mirar desde OpenFirmware </a></span></dt><dt><span class="section"><a href="#Bateria_capacidad_con_olpc-pwr-log">8.2. Medir la capacidad con olpc-pwr-log </a></span></dt></dl></dd><dt><span class="appendix"><a href="#appe-Reparaciones_XO-Revision_History">A. Historial de Revisiones</a></span></dt><dt><span class="index"><a href="#id449443">Índice</a></span></dt></dl></div><div xml:lang="es" class="chapter" id="Introduccion" lang="es"><div class="titlepage"><div><div><h2 class="title">Capítulo 1. Introducción</h2></div></div></div><div class="para">
+		El siguiente manual está orientado para la identificación y solución de daños o desperfectos que las XO, específicamente 1.5, presentan a consecuencia de un manejo no adecuado del equipo.
+	</div><div class="para">
+		En la primera sección de este manual se encontrará una descripción general de cómo identificar los problemas más comunes de hardware (componentes físicos). Es fundamental que la persona que esté encargada de dar mantenimiento a los equipos tenga las habilidades necesarias para la detección de estos problemas y de esta manera disminuir el tiempo invertido en la identificación de los mismos.
+	</div><div class="para">
+		Posteriormente se encuentra una descripción detallada de cada uno de los problemas que hasta el momento han sido detectados por el área de soporte técnico de la Fundación Zamora Terán. Adicionalmente se puntualizan los procedimientos necesarios para dar solución a estos problemas.
+	</div><div class="para">
+		Esperamos que este manual sea un buen aporte que ayude a fortalecer y mejorar el proceso de mantenimiento y reparación de los equipos
+	</div></div><div xml:lang="es" class="chapter" id="Aspesctos_Generales" lang="es"><div class="titlepage"><div><div><h2 class="title">Capítulo 2. Inspección General del Equipo</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#Test_XO_">2.1. Test XO</a></span></dt></dl></div><div class="para">
+		Para iniciar la inspección detallada de la XO es importante realizar una previa revisión del hardware. Este proceso es importante ya que ayudará a tener una mejor visión de los posibles daños del software que se puedan identificar más adelante. Se han de revisar los siguientes componentes:
+	</div><div class="variablelist"><dl><dt class="varlistentry"><span class="term">Pantalla: </span></dt><dd><div class="para">
+					Se debe inspeccionar que no esté quebrada o rallada.
+				</div></dd><dt class="varlistentry"><span class="term">Teclado: </span></dt><dd><div class="para">
+					Se verifica si alguna tecla o alguna parte de la goma del teclado se ha desprendido.
+				</div></dd><dt class="varlistentry"><span class="term">Antena: </span></dt><dd><div class="para">
+					Es importante revisar que ninguna de las dos antenas se encuentre quebrada o flojas ya que esto puede perjudicar considerablemente en la detección de redes inalámbricas.
+				</div></dd><dt class="varlistentry"><span class="term">Batería: </span></dt><dd><div class="para">
+					Se debe verificar que los seguros plásticos que mantienen a la batería en la posición adecuada no se encuentren quebrados
+				</div></dd><dt class="varlistentry"><span class="term">Serial: </span></dt><dd><div class="para">
+					Aunque este no se considere parte del hardware es importante que al retirar la batería del equipo se verifique si este se encuentra en la parte inferior. El número del serial es muy importante para los diferentes procesos internos del área ya que brinda información específica de la XO. En caso que este número de serial haya sido retirado de la XO el proceso a seguir para la obtención del mismo es el siguiente
+				</div></dd></dl></div><div class="para">
+		Encender la XO e inmediatamente presionar la tecla derecha (botones de juego. Figura 1). Al realizar esta acción podremos ver información del equipo entre las cuales está el número serial.
+	</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/fig1.png" alt="Figura 1" /></div></div><h6>Figura 2.1. Figura 1</h6></div><br class="figure-break" /><div class="para">
+		Una vez obtenido el número de serial podemos utilizar la aplicación Zint Barcode (Linux-Windows) para imprimirlo.
+	</div><div class="section" id="Test_XO_"><div class="titlepage"><div><div><h2 class="title" id="Test_XO_">2.1. Test XO</h2></div></div></div><div class="para">
+			Las XO contienen el Hardware Diagnostics (Diagnóstico de Hardware) lo cual realiza una revisión más exhaustiva de los componentes del equipo. Para proceder a esta prueba se debe realizar los siguientes pasos:
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Encender la XO.
+				</div></li><li class="listitem"><div class="para">
+					Presionar inmediatamente el botón direccional izquierdo. Figura 2
+				</div></li><li class="listitem"><div class="para">
+					Automáticamente el diagnóstico se inicia.
+				</div></li></ul></div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/fig2.png" alt="Figura 2" /></div></div><h6>Figura 2.2. Figura 2</h6></div><br class="figure-break" /><div class="para">
+			A continuación se detalla los componentes que se verifican en orden de ejecución:
+		</div><div class="variablelist"><dl><dt class="varlistentry"><span class="term">Batería: </span></dt><dd><div class="para">
+						Podemos observar el estado de la misma; si se encuentra cargándose o viceversa, además de esto podemos ver el porcentaje de carga, voltaje, etc.
+					</div></dd><dt class="varlistentry"><span class="term">Pantalla: </span></dt><dd><div class="para">
+						Se debe inspeccionar que no esté quebrada o rallada.
+					</div></dd><dt class="varlistentry"><span class="term">Los datos del fabricante: </span></dt><dd><div class="para">
+						Estos son: Número de serial, llaves públicas y privada de la fundación.
+					</div></dd><dt class="varlistentry"><span class="term">Memoria RAM: </span></dt><dd><div class="para">
+						La SDRAM en la tarjeta madre es rápidamente testeada.
+					</div></dd><dt class="varlistentry"><span class="term">Procesador: </span></dt><dd><div class="para">
+
+					</div></dd><dt class="varlistentry"><span class="term">Puertos USB: </span></dt><dd><div class="para">
+
+					</div></dd><dt class="varlistentry"><span class="term">Audio: </span></dt><dd><div class="para">
+						Un leve sonido es reproducido por los parlantes. Luego por medio del micrófono se permite la grabación de cualquier sonido el cual es reproducido posteriormente a través de los parlantes.
+					</div></dd><dt class="varlistentry"><span class="term">Cámara: </span></dt><dd><div class="para">
+						Se realiza una prueba de video y captura de imágenes con una duración de 20 segundos.
+					</div></dd><dt class="varlistentry"><span class="term">NANDFlash: </span></dt><dd><div class="para">
+						Se realiza rápidamente una prueba en este dispositivo de almacenamiento.
+					</div></dd><dt class="varlistentry"><span class="term">Pantalla: </span></dt><dd><div class="para">
+						La pantalla es probada parcialmente con unas barras de colores, a continuación, las capacidades de dibujo del CPU se muestran por un tiempo.
+					</div></dd><dt class="varlistentry"><span class="term">Redes inalámbricas: </span></dt><dd><div class="para">
+						Muestra el nombre de las redes que detecta en el lugar.
+					</div></dd><dt class="varlistentry"><span class="term">RTC: </span></dt><dd><div class="para">
+						The real time Clock.
+					</div></dd><dt class="varlistentry"><span class="term">Timer:</span></dt><dd><div class="para">
+						Varias alarmas son probadas.
+					</div></dd><dt class="varlistentry"><span class="term">Touchpad: </span></dt><dd><div class="para">
+						Se realiza una prueba en el mouse del equipo.
+					</div></dd><dt class="varlistentry"><span class="term">Teclado: </span></dt><dd><div class="para">
+						Se realiza prueba del teclado completo y adicionalmente de las teclas que se encuentran ubicadas en el marco de la pantalla.
+					</div></dd></dl></div></div></div><div xml:lang="es" class="chapter" id="Componentes_Internos" lang="es"><div class="titlepage"><div><div><h2 class="title">Capítulo 3. Accediendo a los componentes internos de la XO</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#Parte_Superior">3.1. Parte Superior (Pantalla, Tarjeta Madre)</a></span></dt><dt><span class="section"><a href="#Parte_Inferior">3.2. Parte Inferior (Teclado, Touchpad)</a></span></dt></dl></div><div class="para">
+		Se ha de dividir ésta inspección en dos partes:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				1. Inspección del componente Superior.
+			</div></li><li class="listitem"><div class="para">
+				2. Inspección del componente Inferior.
+			</div></li></ul></div><div class="para">
+		Esto con el objetivo de tener una mayor claridad al momento de desarmar el equipo y que los diferentes elementos no se confundan.
+	</div><div class="section" id="Parte_Superior"><div class="titlepage"><div><div><h2 class="title" id="Parte_Superior">3.1. Parte Superior (Pantalla, Tarjeta Madre)</h2></div></div></div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Tipo de Tornillos y Cantidades
+				</div></li></ul></div><div class="figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="./images/fig3.png" align="middle" alt="Tipos de tornillos" /></div></div><h6>Figura 3.1. Tipos de tornillos</h6></div><br class="figure-break" /><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Para inspeccionar la parte interna de la pantalla lo primero que debemos hacer es retirar los 4 tornillos que se encuentran en la parte inferior de la misma.
+				</div></li></ul></div><div class="figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="./images/fig5.png" align="middle" alt="Tipos de tornillos" /></div></div><h6>Figura 3.2. Tipos de tornillos</h6></div><br class="figure-break" /><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Luego retiramos los soportes del marco y el marco de pantalla. Una vez realizado esto debemos retirar los 4 tornillos que sujetan la pantalla al marco interior.
+				</div></li></ul></div><div class="figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="./images/fig6.png" align="middle" alt="Tipos de tornillos" /></div></div><h6>Figura 3.3. Tipos de tornillos</h6></div><br class="figure-break" /><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					A continuación retiramos los 4 tornillos que unen la cubierta superior del equipo y el marco interno.
+				</div></li></ul></div><div class="figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="./images/fig7.png" align="middle" alt="Tipos de tornillos" /></div></div><h6>Figura 3.4. Tipos de tornillos</h6></div><br class="figure-break" /><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Retiramos la cubierta superior y procedemos a quitar los 4 tornillos que sujetan el disipador de calor.
+				</div></li></ul></div><div class="figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="./images/fig8.png" align="middle" alt="Tipos de tornillos" /></div></div><h6>Figura 3.5. Tipos de tornillos</h6></div><br class="figure-break" /><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Quitamos el tornillo que sujeta la tarjeta de red.
+				</div></li></ul></div><div class="figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="./images/fig9.png" align="middle" alt="Tipos de tornillos" /></div></div><h6>Figura 3.6. Tipos de tornillos</h6></div><br class="figure-break" /><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Y finalmente si el caso amerita retirar toda la tarjeta madre se deben desconectar los siguientes componentes.
+				</div></li></ul></div><div class="figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="./images/fig10.png" align="middle" alt="Tipos de tornillos" /></div></div><h6>Figura 3.7. Tipos de tornillos</h6></div><br class="figure-break" /></div><div class="section" id="Parte_Inferior"><div class="titlepage"><div><div><h2 class="title" id="Parte_Inferior">3.2. Parte Inferior (Teclado, Touchpad)</h2></div></div></div><div class="para">
+			La parte inferior de la XO està compuesta por dos partes: TECLADO Y TOUCHPAD
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					COMPONENTE INFERIOR (Teclado)
+				</div></li></ul></div><div class="para">
+			<code class="code">Tipos de Tornillos y cantidades</code>
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject" align="center"><img src="./images/tornillos_inferiores.png" align="middle" alt="Tipos de tornillos" /></div></div><h6>Figura 3.8. Tipos de tornillos</h6></div><br class="figure-break" /><div class="para">
+			Para inspeccionar el teclado, debemos retirar los 5 tornillos que se localizan en la parte interior de la batería
+		</div><div class="mediaobject" align="center"><img src="./images/tornillos_bateria.png" align="middle" /></div><div class="para">
+			Luego retiramos el complemento de cubierta y retiramos los 4 tornillos que sujetan el borde superior.
+		</div><div class="mediaobject" align="center"><img src="./images/tornillos_sup.png" align="middle" /></div></div></div><div xml:lang="es" class="chapter" id="Formatear_XO" lang="es"><div class="titlepage"><div><div><h2 class="title">Capítulo 4. Formatear XO</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#USB">4.1. USB</a></span></dt><dt><span class="section"><a href="#Nandblaster">4.2. Nandblaster</a></span></dt></dl></div><div class="para">
+		En la XO 1.5, necesitamos 2 archivos <code class="filename">os8.zd</code> y <code class="filename">fs.zip</code>
+	</div><div class="para">
+		En la XO 1.0, los archivos son <code class="filename">os852.img</code> y <code class="filename">fs.zip</code>
+	</div><div class="important"><div class="admonition_header"><h2>Importante</h2></div><div class="admonition"><div class="para">
+			Los archivos <code class="filename">fs.zip</code> son propios de cada versión del SO, es decir el <code class="filename">fs.zip</code> de la XO 1.5 no funciona con la XO 1.0
+		</div></div></div><div class="section" id="USB"><div class="titlepage"><div><div><h2 class="title" id="USB">4.1. USB</h2></div></div></div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Copiar los 2 archivos <code class="filename">os8.zd</code>, para la XO 1.5 o el <code class="filename">os852.img</code>, para la XO 1.0, y <code class="filename">fs.zip</code> en la raíz de la memoria USB.
+				</div></li><li class="listitem"><div class="para">
+					Encender la XO presionando los 4 botones de juego.
+				</div></li><li class="listitem"><div class="para">
+					Esperar que el proceso finalice.
+				</div></li></ul></div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/4_game_keys.png" width="444" alt="Botones de juego para formatear la XO" /></div></div><h6>Figura 4.1. Botones de juego para formatear la XO</h6></div><br class="figure-break" /><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/formateo.png" width="444" alt="Proceso de Formateo de la XO" /></div></div><h6>Figura 4.2. Proceso de Formateo de la XO</h6></div><br class="figure-break" /><div class="para">
+			Una vez terminado el proceso de formateo, la XO se reiniciará automaticamente, y luego buscará el permiso de activación en el siguiente orden: Memoria SD, Memoria USB, Activación Inalámbrica
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/activacion.png" width="444" alt="XO sin permiso de activación" /></div></div><h6>Figura 4.3. XO sin permiso de activación</h6></div><br class="figure-break" /><div class="note"><div class="admonition_header"><h2>Nota</h2></div><div class="admonition"><div class="para">
+				Antes de formatear una XO, es necesario revisar la carga de la batería, para evitar que esta se apague durante el proceso, si tenemos suficientes regletas para conectar las XO a corriente eléctrica, es mejor hacerlo.
+			</div></div></div><div class="important"><div class="admonition_header"><h2>Importante</h2></div><div class="admonition"><div class="para">
+				Estos archivos corresponden a la XO 1.5 basada en el release 10.2.0 de OLPC con Fedora 11.
+			</div></div></div></div><div class="section" id="Nandblaster"><div class="titlepage"><div><div><h2 class="title" id="Nandblaster">4.2. Nandblaster</h2></div></div></div><div class="para">
+			Este proceso es para instalar el SO en varias XO al mismo tiempo, mediante un proceso conocido como NANDblaster, en el cual una XO funciona como servidor y envía la imágen a las demás XO.
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Renombrar el archivo que contiene la imágen de la XO, <code class="filename">os8.zd</code> a <code class="filename">fs.zd</code>
+				</div></li><li class="listitem"><div class="para">
+					Copiar los 2 archivos <code class="filename">fs.zd</code> y <code class="filename">fs.zip</code> en la raíz memoria USB.
+				</div></li><li class="listitem"><div class="para">
+					Insertar la memoria USB en la XO Servidor
+				</div></li><li class="listitem"><div class="para">
+					Acceder al OK-Promt y escribir lo siguiente:
+				</div></li></ul></div><pre class="screen">
+OLPC D5, 1 GiB memory installed, 4 GB internal storage, S/N SHC0520179F
+OpenFirmware Q3A62 EC Firmware Ver:2.2.3
+
+Type 'help' for more information
+
+ok <code class="code">nb-secure</code>
+
+</pre><div class="para">
+			Esperar que la XO elija el canal por el cual se estará enviando la imágen de la XO.
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/nandblaster.png" width="444" alt="XO transmitiendo la imágen por nandblaster" /></div></div><h6>Figura 4.4. XO transmitiendo la imágen por nandblaster</h6></div><br class="figure-break" /><div class="para">
+			Una ves que la XO servidor esté transmitiendo la imágen como se muestra en la figura anterior, se puede iniciar a
+		</div></div></div><div xml:lang="es" class="chapter" id="Activaciones_XO" lang="es"><div class="titlepage"><div><div><h2 class="title">Capítulo 5. Activaciones XO</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#Activaciones_USB">5.1. Imágenes con Firma</a></span></dt><dt><span class="section"><a href="#Activaciones_XS">5.2. Imágenes con Firma</a></span></dt></dl></div><div class="para">
+		Acá va la descripción de instalación del XS
+	</div><div class="section" id="Activaciones_USB"><div class="titlepage"><div><div><h2 class="title" id="Activaciones_USB">5.1. Imágenes con Firma</h2></div></div></div><div class="para">
+			Aca va la descripción de imagenes con firma...
+		</div></div><div class="section" id="Activaciones_XS"><div class="titlepage"><div><div><h2 class="title" id="Activaciones_XS">5.2. Imágenes con Firma</h2></div></div></div><div class="para">
+			Aca va la descripción de imagenes con firma...
+		</div></div></div><div xml:lang="es" class="chapter" id="Problemas_Frecuentes" lang="es"><div class="titlepage"><div><div><h2 class="title">Capítulo 6. Problemas Frecuentes</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#Boot_Failed">6.1. Boot Failed</a></span></dt><dt><span class="section"><a href="#Invalid_System_Date">6.2. Invalid System Date</a></span></dt><dt><span class="section"><a href="#Invalid_System_Date_2">6.3. Invalid System Date 2</a></span></dt><dt><span class="section"><a href="#Sin_Red">6.4. Sin Acceso a redes wireless</a></span></dt><dt><span class="section"><a href="#Memtest">6.5. Prueba Memoria RAM</a></span></dt><dt><span class="section"><a href="#Minicom">6.6. Prueba Nandflash</a></span></dt></dl></div><div class="para">
+		Descripción de los principales problemas que salen en la XO, y como darles soluciones...
+	</div><div class="section" id="Boot_Failed"><div class="titlepage"><div><div><h2 class="title" id="Boot_Failed">6.1. Boot Failed</h2></div></div></div><div class="para">
+			<code class="code">Origen:</code>
+		</div><div class="para">
+			1- Falta de comunicación con el sistema de almacenamiento, donde este puede tener como motivo la oxidación de los pines que entran en contacto con la tarjeta <code class="code">MicroSD</code>, el daño de la tarjeta o bien que la bandeja que la soporta este suelta.
+		</div><div class="para">
+			2- Problemas con el sistema de la XO, donde se pudieron dañar los archivos del SO, esto se puede dar cuando las XO
+		</div><div class="para">
+			<code class="code">¿Cómo diagnosticar el origen del problema?</code>
+		</div><div class="para">
+			Encender el equipo presionando simultáneamente el botón de “check”, lo cual nos muestra la información del equipo, procesador, memoria ram y sistema de almacenamiento. Si en el sistema de almacenamiento nos indica 4GB, esto quiere decir que es sistema y si dice 0GB indica que no reconoce el sistema de almacenamiento y es necesario abrir el equipo para ubicar el problema.
+		</div><div class="para">
+			<code class="code">Solución</code>
+		</div><div class="para">
+			1- Abrir el equipo para inspeccionar el estado de la tarjeta <code class="code">MicroSD</code>. En el mejor de los casos la bandeja que soporta la tarjeta está suelta y solo es necesario ajustarla. De estar en buenas condiciones hay que checar los pines que entran en contacto con la tarjeta estén en buenas condiciones o estén oxidados/quebrados, de ser así se puede intentar remover el óxido de los pines/soldar los pines rotos de ser posible (hay que valorar).
+		</div><div class="para">
+			2- En este caso hay que formatear el equipo. Archivos para formateo: <code class="code">fs.zip</code>/<code class="code">os8.zd</code>
+		</div></div><div class="section" id="Invalid_System_Date"><div class="titlepage"><div><div><h2 class="title" id="Invalid_System_Date">6.2. Invalid System Date</h2></div></div></div><div class="para">
+			La XO enciende con el mensaje <span class="application"><strong>Invalid System Date</strong></span> y busca una activación. Al activar la XO, funciona hasta su próximo reinicio. Si apagamos la XO, el mismo problema sale.
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/isd.png" width="444" alt="XO con Invalid System Date" /></div></div><h6>Figura 6.1. XO con Invalid System Date</h6></div><br class="figure-break" /><div class="para">
+			<code class="filename">Pasos a seguir...</code>
+		</div><div class="para">
+			1. Desarmar la XO, buscar señales de acido y daño en la bateria del reloj y acerca de ella
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Si acido ha salido, limpiar la zona y cambiar la bateria
+				</div></li><li class="listitem"><div class="para">
+					Si hay daño, reemplazar toda la laptop
+				</div></li></ul></div><div class="para">
+			2. Reponer la bateria
+		</div><div class="para">
+			3. Reprogramar la fecha en OpenFirmware con una llave de desarrollar
+		</div><div class="para">
+			4. Desconectar la bateria principal y el cargador por unos minutos
+		</div><div class="para">
+			5. Reconectar la bateria o el cargador y encender la laptop (sin llave de desarrollar) para verificar que hemos solucionado el problema
+		</div><div class="para">
+			<code class="filename">Reprogramando la fecha en OFW</code>
+		</div><pre class="screen">
+ok select /rtc
+ok decimal
+ok sec min hour day month year set-time
+ok 28 06 01 20 06 2011 set-time
+ok power-off
+</pre><div class="para">
+			The component suffered from three failings: 
+			<div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						It was slow
+					</div></li><li class="listitem"><div class="para">
+						It ran hot
+					</div></li><li class="listitem"><div class="para">
+						It didn't actually work
+					</div></li></ul></div>
+			 Of these three, the last was probably the most important.
+		</div><div class="important"><div class="admonition_header"><h2>Importante</h2></div><div class="admonition"><div class="para">
+				Si al reparar este problema la XO nos pide el nombre para crear un perfil del alumno, significa que la XO tenía este problema desde la fábrica. Pero si la XO ya tienía un perfil, significa que este problema apareció despues de un tiempo de usar la XO, es importante que recordemos el porcentaje de laptops que tienen este problema.
+			</div></div></div></div><div class="section" id="Invalid_System_Date_2"><div class="titlepage"><div><div><h2 class="title" id="Invalid_System_Date_2">6.3. Invalid System Date 2</h2></div></div></div><div class="para">
+			<code class="filename">Descripción del problema</code>
+		</div><div class="para">
+			La XO enciende pidiendo la activación, si se utiliza una activación válida la XO no la acepta. Este problema solamente ha sido encontrado en las XO 1.5 con la versión del Firmware <code class="filename">Q3A62</code>, en el cual la fecha del RTC se adelanta hasta el 2012 o posterior, y la XO cree que su activación se ha vencido.
+		</div><div class="important"><div class="admonition_header"><h2>LAPTOPS.DAT</h2></div><div class="admonition"><div class="para">
+				Ojo: Si obtenemos el serial y UUID con un keycolletor, podemos ver el "Serial - UUID - Fecha Actual de la XO 
+<pre class="screen">
+SHC0520179F 8F1FA524-680D-9772-FBFA-5D9D96BE64A8 20121012T055657Z
+SHC051020F8 5B264D78-FF4E-8133-DB3C-DA5CAAB35862 20220101T071147Z
+SHC05200E0D 3EEB9C69-EB31-9802-BF14-30A401F5AE08 20220104T025218Z
+SHC05200AA9 6F84C32E-FAA5-0ED0-7673-002F1FC7143A 20121005T054608Z
+</pre>
+
+			</div></div></div><div class="para">
+			<code class="filename">Pasos a seguir...</code>
+		</div><div class="para">
+			1. Crear una llave de desarrollar para la XO con el problema.
+		</div><div class="para">
+			2. Acceder al <code class="filename">OK-Promt</code>
+		</div><div class="para">
+			3. Escribir boot, para poder acceder a Sugar
+		</div><pre class="screen">
+OLPC D5, 1 GiB memory installed, 4 GB internal storage, S/N SHC0520179F
+OpenFirmware Q3A62 EC Firmware Ver:2.2.3
+
+Type 'help' for more information
+
+<code class="filename">ok boot</code>
+</pre><div class="para">
+			4. En sugar, abrir la actividad terminal en la XO y escribir lo siguiente
+		</div><pre class="screen">
+<code class="filename">su -</code>
+<code class="filename">date --utc -s "2011-05-24 17:58:44"</code>
+<code class="filename">hwclock --systohc</code>
+</pre></div><div class="section" id="Sin_Red"><div class="titlepage"><div><div><h2 class="title" id="Sin_Red">6.4. Sin Acceso a redes wireless</h2></div></div></div><div class="para">
+			Parrafo Jennifer
+		</div><div class="para">
+			<code class="filename">Pasos a seguir...</code>
+		</div><div class="para">
+			1. Clic derecho en opcion Mis Ajustes
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/mis_ajustes.png" width="444" alt="Mis Ajustes" /></div></div><h6>Figura 6.2. Mis Ajustes</h6></div><br class="figure-break" /><div class="para">
+			2.Clic en Red
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/red.png" width="444" alt="Red" /></div></div><h6>Figura 6.3.  Red </h6></div><br class="figure-break" /><div class="para">
+			3.Clic en Descarte Historial de la Red
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/descarte_historial_red.png" width="444" alt="D.Historial de la Red" /></div></div><h6>Figura 6.4.  D.Historial de la Red </h6></div><br class="figure-break" /><div class="para">
+			4. Desmarcar la opcion radio
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/radio.png" width="444" alt="Radio" /></div></div><h6>Figura 6.5.  Radio </h6></div><br class="figure-break" /><div class="para">
+			5. Opcion Aceptar
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/aceptar.png" width="444" alt="Aceptar" /></div></div><h6>Figura 6.6.  Aceptar </h6></div><br class="figure-break" /><div class="para">
+			6.Repetir procedimiento, Seleccionar Opcion Radio y Aceptar
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/marcar_r_aceptar.png" width="444" alt="Marcar Radio" /></div></div><h6>Figura 6.7.  Marcar Radio</h6></div><br class="figure-break" /></div><div class="section" id="Memtest"><div class="titlepage"><div><div><h2 class="title" id="Memtest">6.5. Prueba Memoria RAM</h2></div></div></div><div class="para">
+			Aca va la descripcción del problema Sin Acceso a redes wireless
+		</div></div><div class="section" id="Minicom"><div class="titlepage"><div><div><h2 class="title" id="Minicom">6.6. Prueba Nandflash</h2></div></div></div><div class="para">
+			Aca va la descripcción del problema Sin Acceso a redes wireless
+		</div></div></div><div xml:lang="es" class="chapter" id="Serial_console" lang="es"><div class="titlepage"><div><div><h2 class="title">Capítulo 7. Serial console</h2></div></div></div><div class="para">
+		Con el serial console es posible investigar (y a veces solucionar) problemas con XOs que no funcionan.
+	</div><div class="para">
+		Con el serial console, podes ver lo que hace la XO cuando se enciende, y podes acesar al prompt de <code class="code">OFW</code>, antes de que la pantalla se encienda. También, si el kernel en la XO se cae, usualmente es posible ver los detalles del caido con el serial console.
+	</div><div class="para">
+		<a href="http://wiki.laptop.org/go/Serial_adapters"><em class="citetitle">Serial adapters</em></a> tiene los detalles.
+	</div><div class="para">
+		El proceso (más o menos) desde la pagina es:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				Desensamblar la XO para acesar a la tarjeta madre.
+			</div></li><li class="listitem"><div class="para">
+				Conectar el cable de serial a la tarjeta y al serial board
+			</div></li><li class="listitem"><div class="para">
+				Conectar el serial board a otra computadora con un cable <code class="code">USB</code> A-B
+			</div></li><li class="listitem"><div class="para">
+				Configurar minicom con la informacion desde <a href="http://wiki.laptop.org/go/Serial_adapters#Software"><em class="citetitle">Serial_adapters#Software</em></a>
+			</div></li><li class="listitem"><div class="para">
+				Correr <code class="code">minicom</code>
+			</div></li><li class="listitem"><div class="para">
+				Encender la XO
+			</div></li></ul></div><div class="para">
+		Daniel dejó el equipo en la oficina FZT para hacer este proceso.
+	</div></div><div xml:lang="es" class="chapter" id="Reparacion_bateria" lang="es"><div class="titlepage"><div><div><h2 class="title">Capítulo 8. Reparación batería</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="#Bateria_OpenFirmware">8.1. Mirar desde OpenFirmware </a></span></dt><dt><span class="section"><a href="#Bateria_capacidad_con_olpc-pwr-log">8.2. Medir la capacidad con olpc-pwr-log </a></span></dt></dl></div><div class="para">
+		Descripción de la reparacion de las baterías en las XO
+	</div><div class="section" id="Bateria_OpenFirmware"><div class="titlepage"><div><div><h2 class="title" id="Bateria_OpenFirmware">8.1. Mirar desde OpenFirmware </h2></div></div></div><div class="para">
+			Para ver informacion sobre el estado de la batería, en el <code class="code">ok promt</code> de <code class="code">OFW</code>, escribí el comando:
+		</div><pre class="screen"><code class="code">watch-battery</code></pre><div class="para">
+			Para acesar el prompt de <code class="code">OFW</code>, se necesita una llave de desarrollar.
+		</div></div><div class="section" id="Bateria_capacidad_con_olpc-pwr-log"><div class="titlepage"><div><div><h2 class="title" id="Bateria_capacidad_con_olpc-pwr-log">8.2. Medir la capacidad con olpc-pwr-log </h2></div></div></div><div class="para">
+			Las baterías deberían tener una capacidad de <code class="code">2800-3000 mAh</code>. Es posible medir la capacidad de una batería, así podés asegurarte que la batería está funcionando correctamente.
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Correr la laptop sin el cargador conectado, hasta que la laptop se descargue completamente (y se apaga por no tener más electricidad)
+				</div></li><li class="listitem"><div class="para">
+					Sacar la batería, conectar el cargador, y correr la laptop de nuevo.
+				</div></li><li class="listitem"><div class="para">
+					En la actividad terminal, teclear el comando 
+<pre class="screen"><code class="code">olpc-pwr-log</code></pre>
+				</div></li><li class="listitem"><div class="para">
+					Cuando dice, insertar la batería
+				</div></li><li class="listitem"><div class="para">
+					Ahora dice una línea cada unos segundos con varias columnas. Las interesantes son la segunda (porcentaje de carga) y la última (número de mAh entregados a la batería).
+				</div></li></ul></div><div class="para">
+			Como sabemos que la batería estuvo totalmente descargada (porque lo corrimos hasta que la laptop se apagó), esperamos entregar por lo menos <code class="code">2800mAh</code> a la batería hasta que deje de cargar.
+		</div><div class="para">
+			Para saber mas de <code class="code">olpc-pwr-log</code>, ir a <a href="http://wiki.laptop.org/go/XO_power_draw#olpc-pwr-log"><em class="citetitle">XO power draw#olpc-pwr-log</em></a>
+		</div></div></div><div xml:lang="es" class="appendix" id="appe-Reparaciones_XO-Revision_History" lang="es"><div class="titlepage"><div><div><h1 class="title">Historial de Revisiones</h1></div></div></div><div class="para">
+		<div class="revhistory"><table border="0" width="100%" summary="Revision history"><tr><th align="left" valign="top" colspan="3"><strong>Historial de revisiones</strong></th></tr><tr><td align="left">Revisión 0-0</td><td align="left">Dom Jun 19 2011</td><td align="left"><span class="author"><span class="firstname">German</span> <span class="surname">Ruíz</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Creación inicial del proyecto...</td></tr></table>
+
+				</td></tr><tr><td align="left">Revisión 1-0</td><td align="left">Mie Ago 24 2011</td><td align="left"><span class="author"><span class="firstname">German</span> <span class="surname">Ruíz</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Revisión general y correción en varios capítulos...</td></tr></table>
+
+				</td></tr></table></div>
+
+	</div></div><div class="index" id="id449443"><div class="titlepage"><div><div><h2 class="title">Índice</h2></div></div></div><div class="index"></div></div></div></body></html>

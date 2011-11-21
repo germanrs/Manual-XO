@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Reparaciones_XO.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="Aspesctos_Generales" lang="es">
+	<title>Inspección General del Equipo</title>
+	 <para>
+		Para iniciar la inspección detallada de la XO es importante realizar una previa revisión del hardware. Este proceso es importante ya que ayudará a tener una mejor visión de los posibles daños del software que se puedan identificar más adelante. Se han de revisar los siguientes componentes:
+	</para>
+	 <variablelist>
+		<varlistentry>
+			<term>Pantalla: </term>
+			 <listitem>
+				<para>
+					Se debe inspeccionar que no esté quebrada o rallada.
+				</para>
+			</listitem>
+
+		</varlistentry>
+		 <varlistentry>
+			<term>Teclado: </term>
+			 <listitem>
+				<para>
+					Se verifica si alguna tecla o alguna parte de la goma del teclado se ha desprendido.
+				</para>
+			</listitem>
+
+		</varlistentry>
+		 <varlistentry>
+			<term>Antena: </term>
+			 <listitem>
+				<para>
+					Es importante revisar que ninguna de las dos antenas se encuentre quebrada o flojas ya que esto puede perjudicar considerablemente en la detección de redes inalámbricas.
+				</para>
+			</listitem>
+		</varlistentry>
+		 <varlistentry>
+			<term>Batería: </term>
+			 <listitem>
+				<para>
+					Se debe verificar que los seguros plásticos que mantienen a la batería en la posición adecuada no se encuentren quebrados
+				</para>
+			</listitem>
+		</varlistentry>
+		 <varlistentry>
+			<term>Serial: </term>
+			 <listitem>
+				<para>
+					Aunque este no se considere parte del hardware es importante que al retirar la batería del equipo se verifique si este se encuentra en la parte inferior. El número del serial es muy importante para los diferentes procesos internos del área ya que brinda información específica de la XO. En caso que este número de serial haya sido retirado de la XO el proceso a seguir para la obtención del mismo es el siguiente
+				</para>
+			</listitem>
+		</varlistentry>
+	</variablelist>
+	 <para>
+		Encender la XO e inmediatamente presionar la tecla derecha (botones de juego. Figura 1). Al realizar esta acción podremos ver información del equipo entre las cuales está el número serial.
+	</para>
+	 <figure>
+		<title>Figura 1</title>
+		 <mediaobject>
+			<imageobject>
+				<imagedata fileref="./images/fig1.png" />
+			</imageobject>
+			 <textobject>
+				<phrase>Figura 1</phrase>
+			</textobject>
+
+		</mediaobject>
+
+	</figure>
+	 <para>
+		Una vez obtenido el número de serial podemos utilizar la aplicación Zint Barcode (Linux-Windows) para imprimirlo.
+	</para>
+	 <section id="Test_XO_">
+		<title>Test XO</title>
+		 <para>
+			Las XO contienen el Hardware Diagnostics (Diagnóstico de Hardware) lo cual realiza una revisión más exhaustiva de los componentes del equipo. Para proceder a esta prueba se debe realizar los siguientes pasos:
+		</para>
+		 <itemizedlist mark="opencircle">
+			<listitem>
+				<para>
+					Encender la XO.
+				</para>
+
+			</listitem>
+			 <listitem override="bullet">
+				<para>
+					Presionar inmediatamente el botón direccional izquierdo. Figura 2
+				</para>
+
+			</listitem>
+			 <listitem>
+				<para>
+					Automáticamente el diagnóstico se inicia.
+				</para>
+
+			</listitem>
+
+		</itemizedlist>
+		 <figure>
+			<title>Figura 2</title>
+			 <mediaobject>
+				<imageobject>
+					<imagedata fileref="./images/fig2.png" />
+				</imageobject>
+				 <textobject>
+					<phrase>Figura 2</phrase>
+				</textobject>
+
+			</mediaobject>
+
+		</figure>
+		 <para>
+			A continuación se detalla los componentes que se verifican en orden de ejecución:
+		</para>
+		 <variablelist>
+			<varlistentry>
+				<term>Batería: </term>
+				 <listitem>
+					<para>
+						Podemos observar el estado de la misma; si se encuentra cargándose o viceversa, además de esto podemos ver el porcentaje de carga, voltaje, etc.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Pantalla: </term>
+				 <listitem>
+					<para>
+						Se debe inspeccionar que no esté quebrada o rallada.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Los datos del fabricante: </term>
+				 <listitem>
+					<para>
+						Estos son: Número de serial, llaves públicas y privada de la fundación.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Memoria RAM: </term>
+				 <listitem>
+					<para>
+						La SDRAM en la tarjeta madre es rápidamente testeada.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Procesador: </term>
+				 <listitem>
+					<para>
+
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Puertos USB: </term>
+				 <listitem>
+					<para>
+
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Audio: </term>
+				 <listitem>
+					<para>
+						Un leve sonido es reproducido por los parlantes. Luego por medio del micrófono se permite la grabación de cualquier sonido el cual es reproducido posteriormente a través de los parlantes.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Cámara: </term>
+				 <listitem>
+					<para>
+						Se realiza una prueba de video y captura de imágenes con una duración de 20 segundos.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>NANDFlash: </term>
+				 <listitem>
+					<para>
+						Se realiza rápidamente una prueba en este dispositivo de almacenamiento.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Pantalla: </term>
+				 <listitem>
+					<para>
+						La pantalla es probada parcialmente con unas barras de colores, a continuación, las capacidades de dibujo del CPU se muestran por un tiempo.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Redes inalámbricas: </term>
+				 <listitem>
+					<para>
+						Muestra el nombre de las redes que detecta en el lugar.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>RTC: </term>
+				 <listitem>
+					<para>
+						The real time Clock.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Timer:</term>
+				 <listitem>
+					<para>
+						Varias alarmas son probadas.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Touchpad: </term>
+				 <listitem>
+					<para>
+						Se realiza una prueba en el mouse del equipo.
+					</para>
+				</listitem>
+			</varlistentry>
+			 <varlistentry>
+				<term>Teclado: </term>
+				 <listitem>
+					<para>
+						Se realiza prueba del teclado completo y adicionalmente de las teclas que se encuentran ubicadas en el marco de la pantalla.
+					</para>
+				</listitem>
+			</varlistentry>
+
+		</variablelist>
+
+	</section>
+
+</chapter>
+

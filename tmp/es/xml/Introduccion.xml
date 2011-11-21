@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Reparaciones_XO.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="Introduccion" lang="es">
+	<title>Introducción</title>
+	 <para>
+		El presente manual ha sido creado con el fin de que el lector pueda diagnósticar e identificar problemas en las XO y como darles solución para su debido funcionamiento.
+	</para>
+	 <para>
+		En la primera sección de este manual se estarán tratando temas relacionados con el software de la XO, el diagnóstico básico, formateo por USB, por nandblaster, activación, etc. Al mismo tiempo se estarán presentando algunos problemas conocidos y la forma en como solucionarlos.
+	</para>
+	 <para>
+		Esperamos que este manual sea un buen aporte que ayude a fortalecer y mejorar el proceso de mantenimiento y reparación de los equipos
+	</para>
+</chapter>
+

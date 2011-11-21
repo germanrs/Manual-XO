@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Reparaciones_XO.ent">
+%BOOK_ENTITIES;
+]>
+<book lang="es" status="draft">
+	<xi:include href="Book_Info.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Introduccion.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Test_XO.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Formatear_XO.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Activaciones.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Problemas_Frecuentes.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Motherboard.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Serial_console.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Reparacion_bateria.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Revision_History.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <index />
+</book>
+

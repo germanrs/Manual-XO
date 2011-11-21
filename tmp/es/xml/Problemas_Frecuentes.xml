@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Reparaciones_XO.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="Problemas_Frecuentes" lang="es">
+	<title>Problemas Frecuentes</title>
+	 <para>
+		Descripción de los principales problemas que salen en la XO, y como darles soluciones...
+	</para>
+	 <section id="Boot_Failed">
+		<title>Boot Failed</title>
+		 <para>
+			<code>Origen:</code>
+		</para>
+		 <para>
+			1- Falta de comunicación con el sistema de almacenamiento, donde este puede tener como motivo la oxidación de los pines que entran en contacto con la tarjeta <code>MicroSD</code>, el daño de la tarjeta o bien que la bandeja que la soporta este suelta.
+		</para>
+		 <para>
+			2- Problemas con el sistema de la XO, donde se pudieron dañar los archivos del SO, esto se puede dar cuando las XO
+		</para>
+		 <para>
+			<code>¿Cómo diagnosticar el origen del problema?</code>
+		</para>
+		 <para>
+			Encender el equipo presionando simultáneamente el botón de “check”, lo cual nos muestra la información del equipo, procesador, memoria ram y sistema de almacenamiento. Si en el sistema de almacenamiento nos indica 4GB, esto quiere decir que es sistema y si dice 0GB indica que no reconoce el sistema de almacenamiento y es necesario abrir el equipo para ubicar el problema.
+		</para>
+		 <para>
+			<code>Solución</code>
+		</para>
+		 <para>
+			1- Abrir el equipo para inspeccionar el estado de la tarjeta <code>MicroSD</code>. En el mejor de los casos la bandeja que soporta la tarjeta está suelta y solo es necesario ajustarla. De estar en buenas condiciones hay que checar los pines que entran en contacto con la tarjeta estén en buenas condiciones o estén oxidados/quebrados, de ser así se puede intentar remover el óxido de los pines/soldar los pines rotos de ser posible (hay que valorar).
+		</para>
+		 <para>
+			2- En este caso hay que formatear el equipo. Archivos para formateo: <code>fs.zip</code>/<code>os8.zd</code>
+		</para>
+
+	</section>
+	
+	 <section id="Invalid_System_Date">
+		<title>Invalid System Date</title>
+		 <para>
+			La XO enciende con el mensaje <application>Invalid System Date</application> y busca una activación. Al activar la XO, funciona hasta su próximo reinicio. Si apagamos la XO, el mismo problema sale.
+		</para>
+		 <figure>
+			<title>XO con Invalid System Date</title>
+			 <mediaobject>
+				<imageobject>
+					<imagedata fileref="./images/isd.png" format="PNG" scalefit="1" width="444" />
+				</imageobject>
+
+			</mediaobject>
+
+		</figure>
+		 <para>
+			<filename>Pasos a seguir...</filename>
+		</para>
+		 <para>
+			1. Desarmar la XO, buscar señales de acido y daño en la bateria del reloj y acerca de ella
+		</para>
+		 <itemizedlist>
+			<listitem>
+				<para>
+					Si acido ha salido, limpiar la zona y cambiar la bateria
+				</para>
+			</listitem>
+			 <listitem>
+				<para>
+					Si hay daño, reemplazar toda la laptop
+				</para>
+			</listitem>
+
+		</itemizedlist>
+		 <para>
+			2. Reponer la bateria
+		</para>
+		 <para>
+			3. Reprogramar la fecha en OpenFirmware con una llave de desarrollar
+		</para>
+		 <para>
+			4. Desconectar la bateria principal y el cargador por unos minutos
+		</para>
+		 <para>
+			5. Reconectar la bateria o el cargador y encender la laptop (sin llave de desarrollar) para verificar que hemos solucionado el problema
+		</para>
+		 <para>
+			<filename>Reprogramando la fecha en OFW</filename>
+		</para>
+		 
+<screen>
+ok select /rtc
+ok decimal
+ok sec min hour day month year set-time
+ok 28 06 01 20 06 2011 set-time
+ok power-off
+</screen>
+		 <para>
+			The component suffered from three failings: 
+			<itemizedlist>
+				<listitem>
+					<para>
+						It was slow
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						It ran hot
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						It didn't actually work
+					</para>
+				</listitem>
+
+			</itemizedlist>
+			 Of these three, the last was probably the most important.
+		</para>
+		 <important>
+			<title>Importante</title>
+			 <para>
+				Si al reparar este problema la XO nos pide el nombre para crear un perfil del alumno, significa que la XO tenía este problema desde la fábrica. Pero si la XO ya tienía un perfil, significa que este problema apareció despues de un tiempo de usar la XO, es importante que recordemos el porcentaje de laptops que tienen este problema.
+			</para>
+
+		</important>
+
+	</section>
+	
+	 <section id="Invalid_System_Date_2">
+		<title>Invalid System Date 2</title>
+		 <para>
+			<filename>Descripción del problema</filename>
+		</para>
+		 <para>
+			La XO enciende pidiendo la activación, si se utiliza una activación válida la XO no la acepta. Este problema solamente ha sido encontrado en las XO 1.5 con la versión del Firmware <filename>Q3A62</filename>, en el cual la fecha del RTC se adelanta hasta el 2012 o posterior, y la XO cree que su activación se ha vencido.
+		</para>
+		 <important>
+			<title>LAPTOPS.DAT</title>
+			 <para>
+				Ojo: Si obtenemos el serial y UUID con un keycolletor, podemos ver el "Serial - UUID - Fecha Actual de la XO 
+<screen>
+SHC0520179F 8F1FA524-680D-9772-FBFA-5D9D96BE64A8 20121012T055657Z
+SHC051020F8 5B264D78-FF4E-8133-DB3C-DA5CAAB35862 20220101T071147Z
+SHC05200E0D 3EEB9C69-EB31-9802-BF14-30A401F5AE08 20220104T025218Z
+SHC05200AA9 6F84C32E-FAA5-0ED0-7673-002F1FC7143A 20121005T054608Z
+</screen>
+
+			</para>
+
+		</important>
+		 <para>
+			<filename>Pasos a seguir...</filename>
+		</para>
+		 <para>
+			1. Crear una llave de desarrollar para la XO con el problema.
+		</para>
+		 <para>
+			2. Acceder al <filename>OK-Promt</filename>
+		</para>
+		 <para>
+			3. Escribir boot, para poder acceder a Sugar
+		</para>
+		 
+<screen>
+OLPC D5, 1 GiB memory installed, 4 GB internal storage, S/N SHC0520179F
+OpenFirmware Q3A62 EC Firmware Ver:2.2.3
+
+Type 'help' for more information
+
+<filename>ok boot</filename>
+</screen>
+		 <para>
+			4. En sugar, abrir la actividad terminal en la XO y escribir lo siguiente
+		</para>
+		 
+<screen>
+	<filename>su -</filename>
+<filename>date --utc -s "2011-05-24 17:58:44"</filename>
+<filename>hwclock --systohc</filename>
+</screen>
+	</section>
+	
+	 <section id="Sin_Red_OFW">
+		<title>Sin Red - Desde OFW</title>
+		 <para>
+			Para
+		</para>
+		 <figure>
+			<title>Mis Ajustes</title>
+			 <mediaobject>
+				<imageobject>
+					<imagedata fileref="./images/red_ofw.jpg" format="JPG" scalefit="1" width="444" />
+				</imageobject>
+
+			</mediaobject>
+
+		</figure>
+	</section>
+	
+	<section id="Sin_Red">
+		<title>Sin Red - Desde Sugar</title>
+		 <para>
+			para
+		</para>
+		 <para>
+			<filename>Pasos a seguir...</filename>
+		</para>
+		 <para>
+			1. Clic derecho en opcion Mis Ajustes
+		</para>
+		 <figure>
+			<title>Mis Ajustes</title>
+			 <mediaobject>
+				<imageobject>
+					<imagedata fileref="./images/mis_ajustes.png" format="PNG" scalefit="1" width="444" />
+				</imageobject>
+
+			</mediaobject>
+
+		</figure>
+		 <para>
+			2.Clic en Red
+		</para>
+		 <figure>
+			<title> Red </title>
+			 <mediaobject>
+				<imageobject>
+					<imagedata fileref="./images/red.png" format="PNG" scalefit="1" width="444" />
+				</imageobject>
+
+			</mediaobject>
+
+		</figure>
+		 <para>
+			3.Clic en Descarte Historial de la Red
+		</para>
+		 <figure>
+			<title> D.Historial de la Red </title>
+			 <mediaobject>
+				<imageobject>
+					<imagedata fileref="./images/descarte_historial_red.png" format="PNG" scalefit="1" width="444" />
+				</imageobject>
+
+			</mediaobject>
+
+		</figure>
+		 <para>
+			4. Desmarcar la opcion radio
+		</para>
+		 <figure>
+			<title> Radio </title>
+			 <mediaobject>
+				<imageobject>
+					<imagedata fileref="./images/radio.png" format="PNG" scalefit="1" width="444" />
+				</imageobject>
+
+			</mediaobject>
+
+		</figure>
+		 <para>
+			5. Opcion Aceptar
+		</para>
+		 <figure>
+			<title> Aceptar </title>
+			 <mediaobject>
+				<imageobject>
+					<imagedata fileref="./images/aceptar.png" format="PNG" scalefit="1" width="444" />
+				</imageobject>
+
+			</mediaobject>
+
+		</figure>
+		 <para>
+			6.Repetir procedimiento, Seleccionar Opcion Radio y Aceptar
+		</para>
+		 <figure>
+			<title> Marcar Radio</title>
+			 <mediaobject>
+				<imageobject>
+					<imagedata fileref="./images/marcar_r_aceptar.png" format="PNG" scalefit="1" width="444" />
+				</imageobject>
+
+			</mediaobject>
+
+		</figure>
+	</section>
+	
+	 <section id="Memtest">
+		<title>Prueba Memoria RAM</title>
+		 <para>
+			Aca va la descripcción del problema Sin Acceso a redes wireless
+		</para>
+
+	</section>
+	
+	 <section id="Minicom">
+		<title>Prueba Nandflash</title>
+		 <para>
+			Aca va la descripcción del problema Sin Acceso a redes wireless
+		</para>
+
+	</section>
+
+</chapter>
+

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Reparaciones_XO.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="Test_XO">
+	<title>Test XO</title>
+	<para>
+	En este capitulo vamos a aprender a realizar el <emphasis role="bold">Test Básico de las XO</emphasis>, y a conocer cada una de las partes que componen este Test.
+	</para>
+
+	<para>
+	Para iniciar el Test de la XO realizaos el siguiente procedimiento:
+	</para>
+
+<para>
+        <itemizedlist>
+<listitem><para>Encender la XO presionando el botón de juego izquierdo</para></listitem>
+<listitem><para>Esperar que nos salga el mensaje <emphasis role="bold">Release the game keys to continue</emphasis></para></listitem>
+        </itemizedlist>	
+</para>
+
+	<figure><title>Tecla de Juego Izquierda</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/key_test.jpg" align ="center" format="PNG" width="4in" depth="4.5in"  scalefit="1" />
+                </imageobject>
+                </mediaobject>
+        </figure>
+
+	<figure><title>Mensaje de la XO</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/release_game_test.jpg" format="PNG" scalefit="1" />
+                </imageobject>
+                </mediaobject>
+        </figure>
+
+  	<figure><title>El Test de la XO</title>
+                <mediaobject>
+                <imageobject>
+                        <imagedata fileref="./images/test_intro1.jpg" format="PNG" scalefit="1" />
+                </imageobject>
+                </mediaobject>
+        </figure>
+</chapter>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>5.2. Invalid System Date</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.8" /><meta name="package" content="Manual_XO-Reparaciones_XO-1.5-es-1-1" /><link rel="home" href="index.html" title="Reparaciones XO" /><link rel="up" href="Problemas_Frecuentes.html" title="Capítulo 5. Problemas Frecuentes" /><link rel="prev" href="Problemas_Frecuentes.html" title="Capítulo 5. Problemas Frecuentes" /><link rel="next" href="Invalid_System_Date_2.html" title="5.3. Invalid System Date 2" /></head><body class="draft "><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_left.png" alt="Product Site" /></a><a class="right" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_right.png" alt="Documentation Site" /></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="Problemas_Frecuentes.html"><strong>Anterior</strong></a></li><li class="next"><a accesskey="n" href="Invalid_System_Date_2.html"><strong>Siguiente</strong></a></li></ul><div class="section" id="Invalid_System_Date"><div class="titlepage"><div><div><h2 class="title" id="Invalid_System_Date">5.2. Invalid System Date</h2></div></div></div><div class="para">
+			La XO enciende con el mensaje <span class="application"><strong>Invalid System Date</strong></span> y busca una activación. Al activar la XO, funciona hasta su próximo reinicio. Si apagamos la XO, el mismo problema sale.
+		</div><div class="figure"><div class="figure-contents"><div class="mediaobject"><img src="./images/isd.png" width="444" alt="XO con Invalid System Date" /></div></div><h6>Figura 5.1. XO con Invalid System Date</h6></div><br class="figure-break" /><div class="para">
+			<code class="filename">Pasos a seguir...</code>
+		</div><div class="para">
+			1. Desarmar la XO, buscar señales de acido y daño en la bateria del reloj y acerca de ella
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Si acido ha salido, limpiar la zona y cambiar la bateria
+				</div></li><li class="listitem"><div class="para">
+					Si hay daño, reemplazar toda la laptop
+				</div></li></ul></div><div class="para">
+			2. Reponer la bateria
+		</div><div class="para">
+			3. Reprogramar la fecha en OpenFirmware con una llave de desarrollar
+		</div><div class="para">
+			4. Desconectar la bateria principal y el cargador por unos minutos
+		</div><div class="para">
+			5. Reconectar la bateria o el cargador y encender la laptop (sin llave de desarrollar) para verificar que hemos solucionado el problema
+		</div><div class="para">
+			<code class="filename">Reprogramando la fecha en OFW</code>
+		</div><pre class="screen">
+ok select /rtc
+ok decimal
+ok sec min hour day month year set-time
+ok 28 06 01 20 06 2011 set-time
+ok power-off
+</pre><div class="para">
+			The component suffered from three failings: 
+			<div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						It was slow
+					</div></li><li class="listitem"><div class="para">
+						It ran hot
+					</div></li><li class="listitem"><div class="para">
+						It didn't actually work
+					</div></li></ul></div>
+			 Of these three, the last was probably the most important.
+		</div><div class="important"><div class="admonition_header"><h2>Importante</h2></div><div class="admonition"><div class="para">
+				Si al reparar este problema la XO nos pide el nombre para crear un perfil del alumno, significa que la XO tenía este problema desde la fábrica. Pero si la XO ya tienía un perfil, significa que este problema apareció despues de un tiempo de usar la XO, es importante que recordemos el porcentaje de laptops que tienen este problema.
+			</div></div></div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="Problemas_Frecuentes.html"><strong>Anterior</strong>Capítulo 5. Problemas Frecuentes</a></li><li class="up"><a accesskey="u" href="#"><strong>Subir</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Inicio</strong></a></li><li class="next"><a accesskey="n" href="Invalid_System_Date_2.html"><strong>Siguiente</strong>5.3. Invalid System Date 2</a></li></ul></body></html>

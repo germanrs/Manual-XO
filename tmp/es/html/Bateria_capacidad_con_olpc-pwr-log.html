@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>8.2. Medir la capacidad con olpc-pwr-log</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.8" /><meta name="package" content="Manual_XO-Reparaciones_XO-1.5-es-1-1" /><link rel="home" href="index.html" title="Reparaciones XO" /><link rel="up" href="Reparacion_bateria.html" title="Capítulo 8. Reparación batería" /><link rel="prev" href="Reparacion_bateria.html" title="Capítulo 8. Reparación batería" /><link rel="next" href="appe-Reparaciones_XO-Revision_History.html" title="Apéndice A. Historial de Revisiones" /></head><body class="draft "><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_left.png" alt="Product Site" /></a><a class="right" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_right.png" alt="Documentation Site" /></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="Reparacion_bateria.html"><strong>Anterior</strong></a></li><li class="next"><a accesskey="n" href="appe-Reparaciones_XO-Revision_History.html"><strong>Siguiente</strong></a></li></ul><div class="section" id="Bateria_capacidad_con_olpc-pwr-log"><div class="titlepage"><div><div><h2 class="title" id="Bateria_capacidad_con_olpc-pwr-log">8.2. Medir la capacidad con olpc-pwr-log </h2></div></div></div><div class="para">
+			Las baterías deberían tener una capacidad de <code class="code">2800-3000 mAh</code>. Es posible medir la capacidad de una batería, así podés asegurarte que la batería está funcionando correctamente.
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Correr la laptop sin el cargador conectado, hasta que la laptop se descargue completamente (y se apaga por no tener más electricidad)
+				</div></li><li class="listitem"><div class="para">
+					Sacar la batería, conectar el cargador, y correr la laptop de nuevo.
+				</div></li><li class="listitem"><div class="para">
+					En la actividad terminal, teclear el comando 
+<pre class="screen"><code class="code">olpc-pwr-log</code></pre>
+				</div></li><li class="listitem"><div class="para">
+					Cuando dice, insertar la batería
+				</div></li><li class="listitem"><div class="para">
+					Ahora dice una línea cada unos segundos con varias columnas. Las interesantes son la segunda (porcentaje de carga) y la última (número de mAh entregados a la batería).
+				</div></li></ul></div><div class="para">
+			Como sabemos que la batería estuvo totalmente descargada (porque lo corrimos hasta que la laptop se apagó), esperamos entregar por lo menos <code class="code">2800mAh</code> a la batería hasta que deje de cargar.
+		</div><div class="para">
+			Para saber mas de <code class="code">olpc-pwr-log</code>, ir a <a href="http://wiki.laptop.org/go/XO_power_draw#olpc-pwr-log"><em class="citetitle">XO power draw#olpc-pwr-log</em></a>
+		</div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="Reparacion_bateria.html"><strong>Anterior</strong>Capítulo 8. Reparación batería</a></li><li class="up"><a accesskey="u" href="#"><strong>Subir</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Inicio</strong></a></li><li class="next"><a accesskey="n" href="appe-Reparaciones_XO-Revision_History.html"><strong>Siguiente</strong>Apéndice A. Historial de Revisiones</a></li></ul></body></html>

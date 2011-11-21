@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE bookinfo PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Reparaciones_XO.ent">
+%BOOK_ENTITIES;
+]>
+<bookinfo id="book-Reparaciones_XO-Reparaciones_XO">
+	<title>Reparaciones XO</title>
+	<subtitle></subtitle>
+	<productname>Manual XO</productname>
+	<productnumber>1.5</productnumber>
+	<edition>1</edition>
+	<pubsnumber>1</pubsnumber>
+	<abstract>
+		<para>
+	El presente documento es la guía de reparaciones y diagnóstico de los XO, con el fin de solucionar los problemas de software o de hardware
+		</para>
+	</abstract>
+	<corpauthor>
+		<inlinemediaobject>
+			<imageobject>
+				<imagedata fileref="./images/fzt.svg" format="SVG" />
+			</imageobject>
+		</inlinemediaobject>
+	</corpauthor>
+	<xi:include href="Author_Group.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+</bookinfo>
+
